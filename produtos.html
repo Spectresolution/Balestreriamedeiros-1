@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Balestreria Medeiros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Balestreria Medeiros</h1>
+        <div id="carrinhoIcon" onclick="mostrarCarrinho()">
+            <img src="https://img.icons8.com/ios/452/shopping-cart.png" alt="Carrinho">
+            <span id="contadorCarrinho">0</span>
+        </div>
+    </header>
+
+    <div class="produtosContainer" id="produtosContainer"></div>
+
+    <div id="carrinhoModal" class="modal">
+        <div class="modal-content">
+            <h2>Carrinho de Compras</h2>
+            <div id="produtosCarrinho" class="produtosCarrinho"></div>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+            <button onclick="fecharCarrinho()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Nosso Site!</h1>
+        <p>Estamos redirecionando você para o conteúdo principal.</p>
+    </div>
+
+    <script>
+        // Redirecionar automaticamente para a página de produtos após 3 segundos
+        setTimeout(function() {
+            window.location.href = "produtos.html";
+        }, 3000);
+    </script>
+</body>
+</html>
