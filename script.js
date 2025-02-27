@@ -13,9 +13,8 @@ async function carregarProdutos() {
         div.innerHTML = `
             <img src="${produto.thumbnail}" alt="${produto.title}">
             <h3>${produto.title}</h3>
-            <p>R$ ${produto.price.toFixed(2)}</p>
-            <button onclick="adicionarAoCarrinho('${produto.id}', '${produto.title}', ${produto.price}, '${produto.thumbnail}')">Adicionar ao Carrinho</button>
-        `;
+            <p >R$ ${produto.price.toFixed(2)}</p>
+            <button onclick="adicionarAoCarrinho('${produto.id}', '${produto.title}', ${produto.price}, '${produto.thumbnail}')">Adicionar ao Carrinho</button>`;
         produtosContainer.appendChild(div);
     });
 }
@@ -48,11 +47,11 @@ function atualizarCarrinho() {
     carrinho.forEach(produto => {
         const div = document.createElement("div");
         div.classList.add("produtoCarrinho");
-
+        //Representa o html que vai ser gerado quando o carinho for atuaizado por qualquer coisa
         div.innerHTML = `
             <img src="${produto.imagem}" alt="${produto.nome}" width="50">
             <h3>${produto.nome}</h3>
-            <p>R$ ${(produto.preco * produto.quantidade).toFixed(2)}</p>
+            <p class="preco">R$ ${(produto.preco * produto.quantidade).toFixed(2)}</p>
             <p>Quantidade: 
                 <button onclick="alterarQuantidade('${produto.id}', -1)">-</button>
                 ${produto.quantidade}
